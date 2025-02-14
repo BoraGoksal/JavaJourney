@@ -1,8 +1,13 @@
 package DataStructures;
+import javax.lang.model.element.Element;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 
 public class Advanced_ArrayList {
+    //Advanced Exercises with ArrayList
     public static void main(String[] args){
+        // 1.Reversing an ArrayList
         ArrayList<Integer> Numbers=  new ArrayList<>();
         Numbers.add(1);
         Numbers.add(2);
@@ -11,6 +16,14 @@ public class Advanced_ArrayList {
         Numbers.add(5);
 
         ReverseArrayList(Numbers);
+        //2. Merging two sorted Arrays
+        ArrayList<String> Words = new ArrayList<>();
+        ArrayList<String> Words2 = new ArrayList<>();
+        Words.add("Apple");
+        Words.add("Orange");
+        Words2.add("Watermelon");
+        Words2.add("Pear");
+        MergeArrays(Words,Words2);
     }
 
     public static void ReverseArrayList(ArrayList<Integer> numbers){
@@ -22,4 +35,16 @@ public class Advanced_ArrayList {
         }
         System.out.println("Reversed List:" + numbers);
     }
+    public static void MergeArrays(ArrayList<String> Words, ArrayList<String> Words2){
+        Words.addAll(Words2);
+        Collections.sort(Words);
+        System.out.println(Words);
+    }
+
+    public static void MostFreqElement(ArrayList<Double> Numbers){
+        HashMap<Integer,Integer> frequencyMap = new HashMap<>();
+
+        }
+
 }
+

@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Basic_ArrayList {
 
-    //Basic Operations with ArrayList (add,remove)
+    //Basic Exercises with ArrayList
     public static void main(String[] args){
         //1.
         ArrayList<Integer> Numberlist = new ArrayList<>();
