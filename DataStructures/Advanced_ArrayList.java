@@ -24,6 +24,17 @@ public class Advanced_ArrayList {
         Words2.add("Watermelon");
         Words2.add("Pear");
         MergeArrays(Words,Words2);
+
+        //3. MostFreqElement
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(4);
+        numbers.add(2);
+        numbers.add(4);
+        numbers.add(3);
+        numbers.add(2);
+        numbers.add(4);
+        MostFreqElement(numbers);
+
     }
 
     public static void ReverseArrayList(ArrayList<Integer> numbers){
@@ -41,10 +52,22 @@ public class Advanced_ArrayList {
         System.out.println(Words);
     }
 
-    public static void MostFreqElement(ArrayList<Double> Numbers){
+    public static void MostFreqElement(ArrayList<Integer> Numbers){
         HashMap<Integer,Integer> frequencyMap = new HashMap<>();
 
+        for(int num : Numbers){
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
         }
+
+        int mostFrequentNum = Numbers.get(0);
+        for (int key : frequencyMap.keySet()) {
+            if (frequencyMap.get(key) > frequencyMap.get(mostFrequentNum)) {
+                mostFrequentNum = key;
+            }
+        }
+
+        System.out.println("Most Frequent Element: " + mostFrequentNum);
+    }
 
 }
 
